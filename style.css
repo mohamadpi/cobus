@@ -1,0 +1,333 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* color code: rgb(24, 22, 33) */
+
+/* ############ default ############### */
+body {
+    font-family: "Lato" , sans-serif;
+}
+
+header {
+    background-image:linear-gradient(to bottom , rgba(24, 22, 33, 0.9),rgba(24, 22, 33, 0.8)), url(./photo/mountain.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    display: block;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col-xl-1{width: 8.33%;}
+.col-xl-2{width: 16.66%;}
+.col-xl-3{width: 25%;}
+.col-xl-4{width: 33.33%;}
+.col-xl-5{width: 41.66%;}
+.col-xl-6{width: 50%;}
+.col-xl-7{width: 58.33%;}
+.col-xl-8{width: 66.66%;}
+.col-xl-9{width: 75%;}
+.col-xl-10{width: 83.33%;}
+.col-xl-11{width: 91.66%;}
+.col-xl-12{width: 100%;}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 4% 0;
+}
+
+
+/* ############## navbar ############## */
+
+nav {
+    display: block;
+    width: 100%;
+}
+
+ul.navbar {
+    overflow: hidden;
+}
+
+ul.navbar li {
+    float: right;
+    list-style: none;
+}
+
+ul.navbar li.logo {
+    float: left;
+}
+
+ul.navbar li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 14px;
+    text-align: center;
+}
+
+ul.navbar li.logo a  {
+    font-size: 25px;
+}
+
+ul.navbar li.dropdown a{
+    font-size: 25px;
+    display: none;
+    
+}
+
+ul.navbar li.closer {
+    display: none;
+}
+
+ul.navbar div.md-nav li:hover {
+
+    background: -webkit-linear-gradient(#7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* ########### title text ############# */
+
+div.primary-text {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    line-height: 1.7;
+}
+
+div.primary-text p{
+    display: block;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+div.primary-text h1 {
+    display: block;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+/* ############ title button ############ */
+
+button.start-btn {
+    font-size: 15px;
+    font-weight: 700;
+    background-image: linear-gradient(to right , #7f00ff, #e100ff);
+    padding: 15px 35px;
+    text-align: center;
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    margin: 3%;
+    cursor: pointer;
+}
+
+/* ############### option card #################### */
+
+section {
+    background-color: rgb(24, 22, 33);
+
+}
+
+div.option-card div.box {
+    text-align: center;
+    padding: 35px 20px;
+    margin: 20px;
+    border: 1px solid rgb(56, 52, 77);
+
+}
+
+div.option-card div.box:hover {
+    box-shadow: 0 0 27px 6px rgb(109, 101, 148);
+}
+
+
+div.box div.icon {
+    margin: 0 0 20px ;
+}
+
+div.box div.icon i{
+    background: -webkit-linear-gradient(#9c47fc, #356ad2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 25px ;
+}
+div.box div.lorem{
+    font-size: 20px;
+    color: #ffffff;
+}
+/* #################### navbar responsive ##################### */
+
+@media screen and (max-width:689px){
+
+
+    /* ############# navbar ############### */
+    ul.navbar li:not(:nth-child(1)){
+        display: none;
+    }
+
+    ul.navbar li.dropdown,
+    ul.navbar li.dropdown a{
+        display: block;
+    }
+
+    ul.navbar li.closer {
+        display: none;
+    }
+
+    ul.navbar div.md-nav {
+        display: none;
+        margin: 100px;
+    }
+
+    ul.navbar div.md-nav li {
+        float: none;
+        display: block;
+    }
+    
+    ul.navbar div.md-nav li a{
+        font-size: 25px;
+    }
+    /* ################ open menue navbar ############### */
+
+    header.md-header {
+        background-image: linear-gradient(to bottom , rgba(24, 22, 33, 0.9),rgba(24, 22, 33, 0.8));
+    }
+
+    ul.navbar div.active {
+        display: block;
+        animation: ease-out 1s openmenue;
+    }
+
+    
+
+    div.hide {
+        display: none;
+    }
+
+    @keyframes openmenue {
+        0%{
+            opacity: 0;
+            transform: translateY(-100px);
+
+        }
+        80% {
+            opacity: 0.8;
+            transform: translateY(10px);
+
+        }
+        100%{
+            opacity: 1;
+            transform: translate(0);
+        }
+        
+    }
+
+    
+
+    /* ########## title ########## */
+
+    div.primary-text h1{
+        font-size: 35px;
+    }
+
+}
+
+/* ################ mobile ################# */
+
+@media screen and (max-width: 576px){
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .row::after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+    
+    div.col-md-1{width: 8.33%;}
+    div.col-md-2{width: 16.66%;}
+    div.col-md-3{width: 25%;}
+    div.col-md-4{width: 33.33%;}
+    div.col-md-5{width: 41.66%;}
+    div.col-md-6{width: 50%;}
+    div.col-md-7{width: 58.33%;}
+    div.col-md-8{width: 66.66%;}
+    div.col-md-9{width: 75%;}
+    div.col-md-10{width: 83.33%;}
+    div.col-md-11{width: 91.66%;}
+    div.col-md-12{width: 100%;}
+    
+    .container {
+        width: 100%;
+        margin: auto;
+        padding: 4% 0;
+    }
+
+
+    
+    
+}
+
+
+/* #################### tablet ###################### */
+
+@media screen and (max-width: 768px){
+    .row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .row::after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+    
+    .col-lg-1{width: 8.33%;}
+    .col-lg-2{width: 16.66%;}
+    .col-lg-3{width: 25%;}
+    .col-lg-4{width: 33.33%;}
+    .col-lg-5{width: 41.66%;}
+    .col-lg-6{width: 50%;}
+    .col-lg-7{width: 58.33%;}
+    .col-lg-8{width: 66.66%;}
+    .col-lg-9{width: 75%;}
+    .col-lg-10{width: 83.33%;}
+    .col-lg-11{width: 91.66%;}
+    .col-lg-12{width: 100%;}
+    
+    .container {
+        width: 100%;
+        margin: auto;
+        padding: 4% 0;
+    }
+
+}
