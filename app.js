@@ -5,17 +5,23 @@ var textbox = document.getElementById("textbox");
 var mdnav = document.getElementById("mdnav");
 var main = document.getElementById("main");
 var footer =  document.getElementById("footer");
+var closer = document.getElementById("closer");
+var bars = document.getElementById("bars");
 
 function dropfunc(){
     if (mdnav.className === "md-nav"){
         mdnav.classList.add ("active");
         textbox.classList.add ("hide");
+        bars.style.display = "none";
+        closer.style.display = "block"
         main.style.display = "none"
         footer.style.display = "none"
         
     }else {
         mdnav.classList.remove ("active");
         textbox.classList.remove ("hide"); 
+        bars.style.display = "block";
+        closer.style.display = "none"
         main.style.display = "block"
         footer.style.display = "block"
     } 
