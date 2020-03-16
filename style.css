@@ -7,6 +7,9 @@
 /* color code: rgb(24, 22, 33) */
 
 /* ############ default ############### */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Lato" , sans-serif;
 }
@@ -131,8 +134,6 @@ div.primary-text h1 {
 /* ############ title button ############ */
 
 button.start-btn {
-    font-size: 15px;
-    font-weight: 700;
     background-image: linear-gradient(to right , #7f00ff, #e100ff);
     padding: 15px 35px;
     text-align: center;
@@ -143,11 +144,22 @@ button.start-btn {
     cursor: pointer;
 }
 
+button.start-btn a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+
 /* ############### option card #################### */
 
 section {
     background-color: rgb(24, 22, 33);
 
+}
+
+section.container {
+    padding: 4% 0 0 0;
 }
 
 div.option-card div.box {
@@ -168,7 +180,7 @@ div.box div.icon {
 }
 
 div.box div.icon i{
-    background: -webkit-linear-gradient(#9c47fc, #356ad2);
+    background: -webkit-linear-gradient(#9c47fc, #5f35d2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 25px ;
@@ -176,6 +188,134 @@ div.box div.icon i{
 div.box div.lorem{
     font-size: 20px;
     color: #ffffff;
+}
+
+
+/* ################# main content #################### */
+
+/* ########## about title ########### */
+div.container div.main {
+    background-image: 
+    linear-gradient(to bottom ,
+     rgba(24, 22, 33, 0.9),
+     rgba(24, 22, 33, 0.8)),
+     url(./photo/ball.png);
+    background-size: cover;
+    height: 100%;
+    background-position:top ;
+}
+
+div.main div.ab-title {
+    display: block;
+    text-align: center;
+}
+
+div.main div.ab-title h1{
+    color: #ffffff;
+    font-size: 50px;
+    padding: 50px;
+}
+
+
+/* ######### button style ######### */
+
+div.main div.row-btn {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+
+}
+
+div.main div.row-btn button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+div.row-btn button.active {
+    background-image: linear-gradient(to right , #9c47fc, #E400FF);
+    border-radius: 10px;
+}
+
+/* ####### details ####### */
+
+div.main div.details {
+    display: block;
+    padding: 20px 15%;
+    text-align: center;
+
+}
+
+div.main div.details p {
+    color: rgb(190, 190, 190);
+    font-size: 17px;
+
+}
+
+/* ############## main content ############## */
+
+div.main div.row-content {
+    padding: 10px 40px;
+}
+
+div.row-content div.det-box {
+    padding: 5px 25px;
+    margin: 0 0 15px 0;
+}
+
+div.det-box div.icon-title{
+    margin: 0 0 10px 0;
+}
+
+div.det-box div.icon-title i {
+    background: -webkit-linear-gradient(#9c47fc, #5f35d2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    padding: 10px 15px 10px 0;
+}
+
+div.det-box div.icon-title h1 {
+    color: #fff;
+    font-size: 20px;
+}
+
+div.det-box p{
+    color: rgb(190, 190, 190);
+    font-size: 15px;
+}
+
+/* ########## footer ########### */
+
+footer.footer div.foot-content {
+    display: block;
+    text-align: center;
+    background-color: rgb(24, 22, 33) ;
+}
+
+div.foot-content h1{
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    word-spacing: 15px;
+    margin: 0 0 1.5% 0;
+}
+
+div.foot-content p{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+div.foot-content p.sign {
+    margin: 2% 0 0 0;
+}
+
+div.foot-content a.git-sign{
+    color: #ff2e63;
 }
 /* #################### navbar responsive ##################### */
 
@@ -289,6 +429,22 @@ div.box div.lorem{
         padding: 4% 0;
     }
 
+    div.main div.row-content{
+        padding: 10px 20px;
+    }
+
+    div.main div.details{
+        padding: 10px 10%;
+    }
+
+    div.foot-content h1{
+        word-spacing: 10px;
+        font-size: 25px;
+    }
+
+    div.foot-content p {
+        font-size: 14px;
+    }
 
     
     

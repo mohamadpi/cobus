@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>COBUS</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="grid-system.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6583edbadb.js" crossorigin="anonymous"></script>
 </head>
@@ -30,7 +29,7 @@
         <div class="primary-text" id="textbox">
             <p>hello</p>
             <h1>we are digital design agency</h1>
-            <button class="start-btn">start now</button>
+            <button class="start-btn" id="start-btn"> <a href="#main">start now</a></button>
         </div>
     </header>
     <section class="container" id="main">
@@ -70,34 +69,59 @@
         </div>
         <div class="container">
             <div class="main">
-                <h1 class="ab-title">
-                    about us
-                </h1>
-                <div class="row-btn">
-                    <button>what we do</button>
-                    <button>over version</button>
-                    <button>our skills</button>
+                <div class="ab-title">
+                    <h1>about us</h1>
                 </div>
-                <p class="details">
-
-                </p>
-                <div class="row-content">
-                    <div class="det-box">
-                        <div class="icon-title row"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. Suspendisse</p>
+                <div class="row-btn row" id="btn-group">
+                    <button class="btn active" onclick= btn_1()>what we do</button>
+                    <button class="btn" onclick= btn_2()>over version</button>
+                    <button class="btn" onclick= btn_3()>our skills</button>
+                </div>
+                <div class="details">
+                    <p id="current-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor 
+                    </p>
+                </div>
+                    
+                <div class="row-content row">
+                    <div class="col-xl-4 col-lg-12 col-md-12">
+                        <div class="det-box">
+                            <div class="icon-title row">
+                                <i class="fas fa-tint"></i>
+                                <h1>web design</h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. Suspendisse</p>
+                        </div>
                     </div>
-                    <div class="det-box">
-                        <div class="icon-title row"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. Suspendisse</p>
+                    <div class="col-xl-4 col-lg-12 col-md-12">
+                        <div class="det-box">
+                            <div class="icon-title row">
+                                <i class="far fa-square"></i>
+                                <h1>digital production</h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. Suspendisse</p>
+                        </div>
                     </div>
-                    <div class="det-box">
-                        <div class="icon-title row"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. Suspendisse</p>
+                    <div class="col-xl-4 col-lg-12 col-md-12">
+                        <div class="det-box">
+                            <div class="icon-title row">
+                                <i class="fas fa-cubes"></i>
+                                <h1>internet marketing</h1>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis sagittis tempus. Suspendisse</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <footer class="footer" id="footer">
+        <div class="container foot-content">
+            <h1>how we work</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="sign">designed by <a href="https://github.com/mohamadhoseinpirasteh" class="git-sign" target="_blank">MOHAMAD PIRASTEH</a></p>
+        </div>
+    </footer>
     
     
     <script src="app.js"></script>
