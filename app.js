@@ -33,6 +33,8 @@ window.addEventListener("resize", function() {
     if (window.innerWidth > 680) {
         mdnav.classList.remove ("active");
         textbox.classList.remove ("hide"); 
+        bars.style.display = "block";
+        closer.style.display = "none"
         main.style.display = "block"
         footer.style.display = "block"
     };
